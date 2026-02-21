@@ -1,0 +1,9 @@
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        # Loop through the array
+        for i in range(len(nums)):
+            # If we find the target or a bigger number
+            if nums[i] >= target:
+                return i
+        # If target is bigger than all numbers, put it at the end
+        return len(nums)
